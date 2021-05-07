@@ -30,7 +30,7 @@ for ch in a:
   soma+=int(ch)*multiplicador
   print(f'soma {soma}')
   multiplicador-=1
-soma+=dig1*multiplicador
+soma+=digito1*multiplicador
 
 #
 if ((soma*10)%11) == 10:
