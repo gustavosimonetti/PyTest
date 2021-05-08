@@ -1,22 +1,17 @@
-    alfabeto = 'abcdefghijklmnopqrstuvwyzàáãâéêóôõíúçABCDEFGHIJKLMNOPQRSTUVWYZÀÁÃÂÉÊÓÕÍÚÇ'
-    #dados = "teste"
-    dados = "ôróôr"
-    chave=13
-    #modo='enc' #enc/dec = encripta/decripta
-    modo='dec'
-  
-    strCifrada = ''
-    for c in dados:
-        index = alfabeto.find(c)
-        if index == -1:
-            strCifrada += c
-        else:            
-            if modo == 'enc':
-              new_index = index + chave 
-            else:
-              new_index = index - chave
-
-            new_index = new_index % len(alfabeto)
-            strCifrada += alfabeto[new_index:new_index+1]
-    
-    print(strCifrada)
+text = "Python Rlz!"
+s = 4
+result = ""
+ 
+# traverse text
+for i in range(len(text)):
+  char = text[i]
+ 
+  # Encrypt uppercase characters
+  if (char.isupper()):
+    result += chr((ord(char) + s-65) % 26 + 65)
+ 
+  # Encrypt lowercase characters
+  else:
+    result += chr((ord(char) + s - 97) % 26 + 97)
+ 
+print(f'result {result}')
